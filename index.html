@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Listener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Listener</h1>
+        <div class="upload-section">
+            <input type="file" id="fileInput">
+            <button onclick="uploadFile()">Upload</button>
+        </div>
+        <div class="text-section">
+            <textarea id="textArea" placeholder="Paste your text here"></textarea>
+            <button onclick="processText()">Process Text</button>
+        </div>
+        <div id="result">
+            <h2>Processed Text:</h2>
+            <p id="processedText"></p>
+            <div class="controls">
+                <button onclick="readAloud()">Read Aloud</button>
+                <button onclick="pauseSpeech()">Pause</button>
+                <button onclick="resumeSpeech()">Resume</button>
+                <button onclick="downloadText()">Download</button>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
